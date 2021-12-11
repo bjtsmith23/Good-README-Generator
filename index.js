@@ -27,18 +27,18 @@ const questions = [
 },
 {
     type: 'input',
-    message: 'What command should be run to run tests?',
+    message: 'What command should be used to run tests?',
     name: 'tests',
 },
 {
     type: 'list',
-    message: 'Choose the license for your project?',
+    message: 'Choose the license for your project.',
     name: 'license',
-    choices: ['GPL','Apache','MIT','no license'],
+    choices: ['MIT','GPL','Apache','no license'],
 },
 {
     type: 'input',
-    message: 'What is your Github username',
+    message: 'What is your Github username?',
     name: 'github',
 },
 {
