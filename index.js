@@ -1,46 +1,72 @@
+// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
-const generateHTML = ({ name, location, github, linkedin }) =>
-  `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Hi! My name is ${name}</h1>
-    <p class="lead">I am from ${location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${github}</li>
-      <li class="list-group-item">LinkedIn: ${linkedin}</li>
-    </ul>
-  </div>
-</div>
-</body>
-</html>`;
+// TODO: Create an array of questions for user input
+const questions = [
+{
+    type: 'input',
+    message: 'What is the title of your project?',
+    name: 'title',
+},
+{
+    type: 'input',
+    message: 'What is a description of the project?',
+    name: 'description',
+},
+{
+    type: 'input',
+    message: 'What are the instructions for installation?',
+    name: 'installation',
+},
+{
+    type: 'input',
+    message: 'Describe how to use this repo',
+    name: 'usage',
+},
+{
+    type: 'input',
+    message: 'What command should be run to run tests?',
+    name: 'tests',
+},
+{
+    type: 'list',
+    message: 'Choose the license for your project?',
+    name: 'license',
+    choices: ['GPL','Apache','MIT','no license'],
+},
+{
+    type: 'input',
+    message: 'What is your Github username',
+    name: 'github',
+},
+{
+    type: 'input',
+    message: 'What is your email address?',
+    name: 'email',
+},
+];
 
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
-    },
-    {
-      type: 'input',
-      message: 'Location?',
-      name: 'stack',
-    },
-    {
-      type: 'list',
-      message: 'LinkedIn URL?',
-      name: 'contact',
-     
-    },
-  ])
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Successfully created README.md!')
+        }
+    });
+}
+
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        console.log(answers);
+        var readMeData = generateMarkdown(answers);
+        writeToFile("README.md", readMeData);
+    });
+};
+
+// Function call to initialize app
+init();
