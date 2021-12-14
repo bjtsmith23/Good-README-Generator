@@ -1,23 +1,24 @@
-# Good ReadMe Generator
-    ## Table of Contents
-    * [Description](#description)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributors](#contributors)
-    * [Questions](#questions)
-    
-    ## Description
-     generate a Readme file through command line prompt in VS code.
-    ## Installation
-     npm 
-    ## Usage 
-    To form and generate good readme file
-    ## License 
-    ![Github license](https://img.shields.io/badge/license-MIT-blue.svg)
-    ## Contributors 
-    undefined
-    ## Questions 
-    If  you have any more questions feel free to email me at bjtsmith23@gmail.com. You can find other work of mine
-    at [undefined](https://github.com/undefined) 
-  
+# project
+[![License Badge](https://img.shields.io/static/v1?label=License&message=Apache&color=green&?style=plastic&link=https://choosealicense.com/licenses/apache-2.0/)](https://choosealicense.com/licenses/apache-2.0/)
+  ## Table of Contents
+  - [Description](#Description)
+  - [Installations](#Installations)
+  - [Usage](#Usage)
+  - [Tests](#Tests)
+  - [License](#License)
+  - [Questions](#Questions)
+  ## Description
+  description
+  ## Installations
+  npm i
+  ## Usage
+  to generate readme file
+  ## Tests
+  npm test
+  ## License
+  [![License Badge](https://img.shields.io/static/v1?label=License&message=Apache&color=green&?style=plastic&link=https://choosealicense.com/licenses/apache-2.0/)](https://choosealicense.com/licenses/apache-2.0/)
+  </br>
+  This application uses Apache license. 
+  ## Questions 
+  If you have any questions or would like to contact me, you can [email](mailto:jgh@email.com) me
+  or check out my [GitHub](https://github.com/bjtsmith23).
