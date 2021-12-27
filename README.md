@@ -31,4 +31,4 @@
 
   ## Screenshot of Application
 
-  (/images/capture.png)
+  ![Screenshot](images/capture.png)
