@@ -31,4 +31,4 @@
 
   ## Screenshot of Application
 
-  ![Readme Generator Screenshot Questions](/images/capture.png)
+  (/images/capture.png)
